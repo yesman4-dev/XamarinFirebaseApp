@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebaseApp.Views.RegisterUser">
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <Label Text="Crear nueva cuenta"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                   FontSize="Large"/>
+            <StackLayout BackgroundColor="Black" HorizontalOptions="Center" Padding="1">
+                <Label Text="Fotografía" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Frame BackgroundColor="#FFFFFF" Padding="5">
+                    <Image x:Name="USERImage" HeightRequest="200" WidthRequest="200"/>
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imgpersona_Tapped"></TapGestureRecognizer>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </StackLayout>
+
+            <Entry Placeholder="Nombre"
+                   x:Name="TxtName"></Entry>
+
+            <StackLayout>
+
+                <Picker Title="Seleccione la Facultad" x:Name="liname"></Picker>
+
+            </StackLayout>
+            
+            
+            <Entry Placeholder="Correo electronico" 
+                   x:Name="TxtEmail"></Entry>
+            
+            <Entry Placeholder="Clave"
+                   IsPassword="True"
+                   x:Name="TxtPassword"></Entry>
+            
+            <Entry IsPassword="True" Placeholder="Repite tu clave"
+                   x:Name="TxtConfirmPass"></Entry>
+            
+            <Button Text="Aceptar cambios" x:Name="ButtonRegister"
+                    Clicked="ButtonRegister_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
